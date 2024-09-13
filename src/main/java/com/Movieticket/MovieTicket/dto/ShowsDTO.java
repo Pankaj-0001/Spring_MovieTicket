@@ -13,4 +13,6 @@ public class ShowsDTO {
     private String id;
     private Time start;
     private Time end;
+    private String theater_theater_id;
+    private String movie_licence_id;
 }

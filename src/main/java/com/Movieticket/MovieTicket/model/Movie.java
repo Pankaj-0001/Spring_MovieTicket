@@ -24,12 +24,12 @@ public class Movie {
     private String description;
     private Time duration;
     private String language;
-    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "DD-mm-YYYY")
+    @JsonFormat(shape = JsonFormat.Shape.STRING,pattern = "DD-MM-YYYY")
     private Date releaseDate;
     private String  country;
     private String genre;
 
-    @OneToMany(mappedBy = "movie",cascade = CascadeType.ALL)
+    @OneToMany
     private List<Shows> shows;
 
 }

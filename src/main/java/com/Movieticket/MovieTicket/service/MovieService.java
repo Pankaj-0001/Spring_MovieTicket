@@ -26,6 +26,22 @@ public class MovieService {
         return movieDTO;
     }
 
+    public MovieDTO addMovie(MovieDTO movieDTO) {
+        Movie movie = MovieMapper.mapTomovie(movieDTO);
+        Movie savedMovie = movieRepo.save(movie);
+
+        return MovieMapper.mapTomovieDTO(savedMovie);
+    }
 
 
+    public MovieDTO updateMovie(MovieDTO movieDTO) {
+        if(movieRepo.existsById(movieDTO.getLicenseid())){
+            Movie movie = MovieMapper.mapTomovie(movieDTO);
+            Movie updatedMov = movieRepo.save(movie);
+            return MovieMapper.mapTomovieDTO(updatedMov);
+        }
+        else {
+            return null;
+        }
+    }
 }

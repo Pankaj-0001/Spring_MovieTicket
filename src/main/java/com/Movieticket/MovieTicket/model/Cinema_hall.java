@@ -21,6 +21,6 @@ public class Cinema_hall {
     private String cineHallCity;
     private long theatersNumber;
 
-    @OneToMany(mappedBy = "cinema_hall",cascade = CascadeType.ALL)
-    private List<Theater> theaters;
+//    @OneToMany(mappedBy = "cinema_hall",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
+//    private List<Theater> theaters;
 }

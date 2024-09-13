@@ -11,4 +11,5 @@ public class SeatDTO {
     private String seatId;
     private Double seatPrice;
     private Boolean seatStatus;
+    private String shows_id;
 }

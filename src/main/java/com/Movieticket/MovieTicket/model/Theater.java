@@ -19,9 +19,10 @@ public class Theater {
     private String theaterId;
     private long numberOfSeats;
 
-    @OneToMany(mappedBy = "theater",cascade = CascadeType.ALL)
+    @OneToMany
     private List<Shows> shows;
 
-    @ManyToOne
+    @ManyToOne(fetch =FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinColumn(name = "cinema_hall_id")
     private Cinema_hall cinema_hall;
 }

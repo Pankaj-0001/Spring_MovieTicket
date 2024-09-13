@@ -21,12 +21,14 @@ public class Shows {
     private Time start;
     private Time end;
 
-    @ManyToOne
+    @ManyToOne(fetch =FetchType.EAGER, cascade = CascadeType.ALL)
+    @JoinColumn(name = "movie_id")
     private Movie movie;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinColumn(name = "theater_id")
     private Theater theater;
 
-    @OneToMany(mappedBy = "shows",cascade = CascadeType.ALL)
+    @OneToMany
     private List<Seat> seats;
 }

@@ -18,7 +18,8 @@ public class Seat {
     private Double seatPrice;
     private Boolean seatStatus;
 
-    @ManyToOne
+    @ManyToOne(fetch = FetchType.EAGER,cascade = CascadeType.ALL)
+    @JoinColumn(name = "show_id")
     private Shows shows;
 
 

@@ -1,6 +1,7 @@
 package com.Movieticket.MovieTicket.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import jakarta.persistence.Id;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -12,6 +13,7 @@ import java.util.Date;
 @AllArgsConstructor
 @NoArgsConstructor
 public class MovieDTO {
+    @Id
     private String licenseid;
     private String moviename;
     private String description;
