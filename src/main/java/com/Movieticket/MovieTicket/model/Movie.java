@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Movie {
     @Id
-    private String licenseId;
+    private int licenseId;
     private String movieName;
     private String description;
     private Time duration;
@@ -29,7 +29,6 @@ public class Movie {
     private String  country;
     private String genre;
 
-    @OneToMany
-    private List<Shows> shows;
+
 
 }

@@ -14,7 +14,7 @@ import java.util.Date;
 @NoArgsConstructor
 public class MovieDTO {
     @Id
-    private String licenseid;
+    private int licenseid;
     private String moviename;
     private String description;
     private Time duration;

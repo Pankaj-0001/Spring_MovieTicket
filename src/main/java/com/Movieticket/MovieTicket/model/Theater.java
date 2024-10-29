@@ -16,11 +16,9 @@ import java.util.List;
 @AllArgsConstructor
 public class Theater {
     @Id
-    private String theaterId;
+    private int theaterId;
     private long numberOfSeats;
 
-    @OneToMany
-    private List<Shows> shows;
 
     @ManyToOne(fetch =FetchType.EAGER,cascade = CascadeType.ALL)
     @JoinColumn(name = "cinema_hall_id")

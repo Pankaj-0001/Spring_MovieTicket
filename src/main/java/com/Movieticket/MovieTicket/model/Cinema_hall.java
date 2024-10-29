@@ -16,10 +16,10 @@ import java.util.List;
 @NoArgsConstructor
 public class Cinema_hall {
     @Id
-    private String cineId;
+    private int cineId;
     private String cineHallName;
     private String cineHallCity;
-    private long theatersNumber;
+    private int theatersNumber;
 
 //    @OneToMany(mappedBy = "cinema_hall",cascade = CascadeType.ALL,fetch = FetchType.EAGER)
 //    private List<Theater> theaters;

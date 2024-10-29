@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Shows {
     @Id
-    private String id;
+    private int id;
     private Time start;
     private Time end;
 
@@ -29,6 +29,5 @@ public class Shows {
     @JoinColumn(name = "theater_id")
     private Theater theater;
 
-    @OneToMany
-    private List<Seat> seats;
+
 }

@@ -2,9 +2,10 @@ package com.Movieticket.MovieTicket.util;
 
 import com.Movieticket.MovieTicket.dto.Cinema_hallDTO;
 import com.Movieticket.MovieTicket.model.Cinema_hall;
+import org.springframework.stereotype.Component;
 
+@Component
 public class Cinema_hallMapper {
-
 
 
 

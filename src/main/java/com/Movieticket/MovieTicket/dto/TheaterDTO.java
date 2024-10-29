@@ -11,7 +11,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class TheaterDTO {
-    private String theaterId;
+    private int theaterId;
     private long numberOfSeats;
-    private Cinema_hall cinema_hall;
+    private int cinema_hall_id;
 }

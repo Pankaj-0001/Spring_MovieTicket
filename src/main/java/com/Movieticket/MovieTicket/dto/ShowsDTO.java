@@ -1,5 +1,7 @@
 package com.Movieticket.MovieTicket.dto;
 
+import com.Movieticket.MovieTicket.model.Movie;
+import com.Movieticket.MovieTicket.model.Theater;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -10,9 +12,9 @@ import java.sql.Time;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ShowsDTO {
-    private String id;
+    private int id;
     private Time start;
     private Time end;
-    private String theater_theater_id;
-    private String movie_licence_id;
+    private int movie;
+    private int theater;
 }
