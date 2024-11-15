@@ -16,7 +16,7 @@ import java.util.List;
 @NoArgsConstructor
 public class Cinema_hall {
     @Id
-    private int cineId;
+    private String cineId;
     private String cineHallName;
     private String cineHallCity;
     private int theatersNumber;

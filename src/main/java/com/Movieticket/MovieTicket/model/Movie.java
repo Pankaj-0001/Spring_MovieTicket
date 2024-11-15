@@ -19,7 +19,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Movie {
     @Id
-    private int licenseId;
+    private String licenseId;
     private String movieName;
     private String description;
     private Time duration;

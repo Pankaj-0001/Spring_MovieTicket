@@ -14,11 +14,11 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Ticket {
     @Id
-    private int ticketID;
+    private String ticketID;
     private String cinema_hall_name;
     private String movie_name;
-    private int theater_id;
-    private int show_id;
-    private int seat_id;
+    private String theater_id;
+    private String show_id;
+    private String seat_id;
 
 }

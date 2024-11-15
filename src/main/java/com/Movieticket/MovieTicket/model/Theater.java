@@ -16,7 +16,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Theater {
     @Id
-    private int theaterId;
+    private String theaterId;
     private long numberOfSeats;
 
 

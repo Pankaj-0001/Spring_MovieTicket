@@ -12,9 +12,9 @@ import java.sql.Time;
 @AllArgsConstructor
 @NoArgsConstructor
 public class ShowsDTO {
-    private int id;
+    private String id;
     private Time start;
     private Time end;
-    private int movie;
-    private int theater;
+    private String movie;
+    private String theater;
 }

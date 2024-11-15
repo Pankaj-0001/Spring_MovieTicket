@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TicketDTO {
-    private int ticketID;
-    private int seat_id;
-    private int show_id;
+    private String ticketID;
+    private String seat_id;
+    private String show_id;
 }

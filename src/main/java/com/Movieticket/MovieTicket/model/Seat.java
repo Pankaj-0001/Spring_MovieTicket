@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class Seat {
     @Id
-    private int seatId;
+    private String seatId;
     private Double seatPrice;
     private Boolean seatStatus;
 

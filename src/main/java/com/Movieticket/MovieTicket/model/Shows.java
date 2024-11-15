@@ -17,7 +17,7 @@ import java.util.List;
 @AllArgsConstructor
 public class Shows {
     @Id
-    private int id;
+    private String id;
     private Time start;
     private Time end;
 

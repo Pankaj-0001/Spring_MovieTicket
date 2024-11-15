@@ -8,7 +8,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Cinema_hallDTO {
-    private int cineId;
+    private String cineId;
     private String cineHallName;
     private String cineHallCity;
     private int theatersNumber;

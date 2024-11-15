@@ -8,8 +8,8 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SeatDTO {
-    private int seatId;
+    private String seatId;
     private Double seatPrice;
     private Boolean seatStatus;
-    private int shows_id;
+    private String shows_id;
 }

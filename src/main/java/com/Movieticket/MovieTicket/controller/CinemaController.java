@@ -1,7 +1,7 @@
 package com.Movieticket.MovieTicket.controller;
 
 import com.Movieticket.MovieTicket.dto.Cinema_hallDTO;
-import com.Movieticket.MovieTicket.repo.CinemaRepo;
+
 import com.Movieticket.MovieTicket.service.CinemaHallService;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
