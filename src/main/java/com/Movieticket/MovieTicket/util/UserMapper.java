@@ -12,7 +12,7 @@ public class UserMapper {
                 .userid(userRequest.getUserid())
                 .username(userRequest.getUsername())
                 .password(userRequest.getPassword())
-                .email_id(userRequest.getEmail_id())
+                .email(userRequest.getEmail())
                 .city(userRequest.getCity())
                 .roles(userRequest.getRoles())
                 .build();
@@ -24,7 +24,7 @@ public class UserMapper {
                 user.getUserid(),
                 user.getUsername(),
                 user.getPassword(),
-                user.getEmail_id(),
+                user.getEmail(),
                 user.getRoles(),
                 user.getCity()
         );

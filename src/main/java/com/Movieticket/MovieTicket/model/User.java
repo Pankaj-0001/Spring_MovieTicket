@@ -19,7 +19,7 @@ public class User {
     private int userid;
     private String username;
     private String password;
-    private String email_id;
+    private String email;
     private String roles;
     private String city;
 
