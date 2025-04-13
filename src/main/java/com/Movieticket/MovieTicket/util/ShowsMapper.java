@@ -2,7 +2,7 @@ package com.Movieticket.MovieTicket.util;
 
 import com.Movieticket.MovieTicket.dto.ShowsDTO;
 import com.Movieticket.MovieTicket.model.Movie;
-import com.Movieticket.MovieTicket.model.Shows;
+import com.Movieticket.MovieTicket.model.Show;
 import com.Movieticket.MovieTicket.model.Theater;
 import com.Movieticket.MovieTicket.repo.MovieRepo;
 import com.Movieticket.MovieTicket.repo.TheaterRepo;
@@ -20,28 +20,28 @@ public class ShowsMapper {
 
 
 
-    public  Shows mapToshows(ShowsDTO showsDTO){
+    public Show mapToshows(ShowsDTO showsDTO){
         Optional<Movie> movie = movieRepo.findById(showsDTO.getMovie());
         Optional<Theater> theater = theaterRepo.findById(showsDTO.getTheater());
         if (movie.isPresent() && theater.isPresent()) {
-            Shows shows = new Shows();
-            shows.setId(showsDTO.getId());
-            shows.setStart(showsDTO.getStart());
-            shows.setEnd(showsDTO.getEnd());
-            shows.setMovie(movie.get());
-            shows.setTheater(theater.get());
-            return shows;
+            Show show = new Show();
+            show.setId(showsDTO.getId());
+            show.setStart(showsDTO.getStart());
+            show.setEnd(showsDTO.getEnd());
+            show.setMovie(movie.get());
+            show.setTheater(theater.get());
+            return show;
         }else {
             throw new RuntimeException("nothing found");
         }
     }
-    public  ShowsDTO mapToshowDTO(Shows shows){
+    public  ShowsDTO mapToshowDTO(Show show){
         ShowsDTO showsDTO = new ShowsDTO(
-                shows.getId(),
-                shows.getStart(),
-                shows.getEnd(),
-                shows.getMovie().getLicenseId(),
-                shows.getTheater().getTheaterId()
+                show.getId(),
+                show.getStart(),
+                show.getEnd(),
+                show.getMovie().getLicenseId(),
+                show.getTheater().getTheaterId()
         );
         return showsDTO;
     }

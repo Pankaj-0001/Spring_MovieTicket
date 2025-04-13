@@ -1,24 +1,36 @@
 package com.Movieticket.MovieTicket.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.hibernate.annotations.CreationTimestamp;
+
+import java.util.Date;
 
 @Entity
 @Table(name = "ticket")
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Ticket {
+public class  Ticket {
     @Id
-    private String ticketID;
-    private String cinema_hall_name;
-    private String movie_name;
-    private String theater_id;
-    private String show_id;
-    private String seat_id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private int ticketId;
+
+    private int totalTicketsPrice;
+
+    private String bookedSeats;
+
+    @CreationTimestamp
+    private Date bookedAt;
+
+    @ManyToOne
+    @JoinColumn
+    private Show show;
+
+    @ManyToOne
+    @JoinColumn
+    private User user;
 
 }

@@ -21,8 +21,8 @@ public class TicketController {
     private TicketService ticketService;
 
 
-    @PostMapping("/addTicket")
-    public ResponseEntity<TicketDTO> addTicket(@RequestBody TicketDTO ticketDTO){
-        return new ResponseEntity<>(ticketService.addTicket(ticketDTO), HttpStatus.CREATED);
-    }
+//    @PostMapping("/addTicket")
+//    public ResponseEntity<TicketDTO> addTicket(@RequestBody TicketDTO ticketDTO){
+//        return new ResponseEntity<>(ticketService.addTicket(ticketDTO), HttpStatus.CREATED);
+//    }
 }

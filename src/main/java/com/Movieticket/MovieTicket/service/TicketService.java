@@ -16,9 +16,9 @@ public class TicketService {
         this.ticketMapper = ticketMapper;
     }
 
-    public TicketDTO addTicket(TicketDTO ticketDTO){
-        Ticket ticket = ticketMapper.maptoTicket(ticketDTO);
-        Ticket saveTicket = ticketRepo.save(ticket);
-        return ticketMapper.maptoTicketDTO(saveTicket);
-    }
+//    public TicketDTO addTicket(TicketDTO ticketDTO){
+//        Ticket ticket = ticketMapper.maptoTicket(ticketDTO);
+//        Ticket saveTicket = ticketRepo.save(ticket);
+//        return ticketMapper.maptoTicketDTO(saveTicket);
+//    }
 }

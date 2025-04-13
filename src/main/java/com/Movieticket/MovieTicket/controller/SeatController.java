@@ -18,9 +18,9 @@ public class SeatController {
         this.seatService = seatService;
     }
 
-    @PostMapping("/addSeat")
-    public ResponseEntity<SeatDTO> addShow(@RequestBody SeatDTO seatDTO){
-        return new ResponseEntity<>(seatService.addseat(seatDTO), HttpStatus.CREATED);
-    }
+//    @PostMapping("/addSeat")
+//    public ResponseEntity<SeatDTO> addSeat(@RequestBody SeatDTO seatDTO){
+//        return new ResponseEntity<>(seatService.addseat(seatDTO), HttpStatus.CREATED);
+//    }
 
 }

@@ -4,11 +4,13 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class TicketDTO {
-    private String ticketID;
-    private String seat_id;
+    private List<String> booking_ticket;
+    private String user_id;
     private String show_id;
 }

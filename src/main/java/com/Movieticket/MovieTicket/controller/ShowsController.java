@@ -1,5 +1,6 @@
 package com.Movieticket.MovieTicket.controller;
 
+import com.Movieticket.MovieTicket.dto.ShowSeatRequest;
 import com.Movieticket.MovieTicket.dto.ShowsDTO;
 import com.Movieticket.MovieTicket.service.ShowsService;
 import org.springframework.http.HttpStatus;
@@ -22,5 +23,11 @@ public class ShowsController {
     @PostMapping("/addShow")
     public ResponseEntity<ShowsDTO> addShow(@RequestBody ShowsDTO showsDTO){
         return new ResponseEntity<>(showsService.addShow(showsDTO), HttpStatus.CREATED);
+    }
+
+    @PostMapping("/associateShowSeat")
+    public ResponseEntity<String> associateShowSeats(@RequestBody ShowSeatRequest request) {
+        String result = showsService.associateSeat(request);
+        return new ResponseEntity<>(result, HttpStatus.CREATED);
     }
 }

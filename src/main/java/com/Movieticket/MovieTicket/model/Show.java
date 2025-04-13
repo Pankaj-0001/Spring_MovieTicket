@@ -7,6 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.sql.Time;
+import java.util.ArrayList;
 import java.util.List;
 
 @Entity
@@ -15,7 +16,7 @@ import java.util.List;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-public class Shows {
+public class Show {
     @Id
     private String id;
     private Time start;
@@ -29,5 +30,9 @@ public class Shows {
     @JoinColumn(name = "theater_id")
     private Theater theater;
 
+    @OneToMany(mappedBy = "show" , cascade = CascadeType.ALL)
+    private List<ShowSeat> showSeatList = new ArrayList<>();
 
+    @OneToMany(mappedBy = "show" , cascade = CascadeType.ALL)
+    private List<Ticket> ticketList = new ArrayList<>();
 }

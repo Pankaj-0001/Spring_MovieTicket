@@ -19,11 +19,12 @@ public class TheaterMapper {
     public  Theater mapTotheater(TheaterDTO theaterDTO){
         Optional<Cinema_hall> cinema_hall = cinemaRepo.findById(theaterDTO.getCinema_hall_id());
         if(cinema_hall.isPresent()){
-            Theater theater= new Theater(
-                    theaterDTO.getTheaterId(),
-                    theaterDTO.getNumberOfSeats(),
-                    cinema_hall.get()
-            );
+            Theater theater= Theater.builder()
+                    .theaterId(theaterDTO.getTheaterId())
+                    .numberOfSeats(theaterDTO.getNumberOfSeats())
+                    .cinema_hall(cinema_hall.get())
+                    .build()
+            ;
             return theater;
         }else{
             throw new RuntimeException("no cinema found");
