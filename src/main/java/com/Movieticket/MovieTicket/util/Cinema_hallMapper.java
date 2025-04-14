@@ -13,7 +13,7 @@ public class Cinema_hallMapper {
         Cinema_hallDTO cinemaHallDTO = new Cinema_hallDTO(
                 cinemaHall.getCineId(),
                 cinemaHall.getCineHallName(),
-                cinemaHall.getCineHallCity(),
+                cinemaHall.getAddress(),
                 cinemaHall.getTheatersNumber()
         );
         return cinemaHallDTO;
@@ -22,7 +22,7 @@ public class Cinema_hallMapper {
          Cinema_hall cinemaHall = Cinema_hall.builder()
                  .cineId(cinemaHallDTO.getCineId())
                  .cineHallName(cinemaHallDTO.getCineHallName())
-                 .cineHallCity(cinemaHallDTO.getCineHallCity())
+                 .address(cinemaHallDTO.getAddress())
                  .theatersNumber(cinemaHallDTO.getTheatersNumber())
                  .build();
          return cinemaHall;

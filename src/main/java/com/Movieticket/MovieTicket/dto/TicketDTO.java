@@ -11,6 +11,6 @@ import java.util.List;
 @NoArgsConstructor
 public class TicketDTO {
     private List<String> booking_ticket;
-    private String user_id;
+    private String userEmail;
     private String show_id;
 }

@@ -10,6 +10,6 @@ import lombok.NoArgsConstructor;
 public class Cinema_hallDTO {
     private String cineId;
     private String cineHallName;
-    private String cineHallCity;
+    private String address;
     private int theatersNumber;
 }

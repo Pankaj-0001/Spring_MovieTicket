@@ -8,6 +8,7 @@ import lombok.NoArgsConstructor;
 
 import java.sql.Time;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -19,6 +20,7 @@ import java.util.List;
 public class Show {
     @Id
     private String id;
+    private Date date;
     private Time start;
     private Time end;
 

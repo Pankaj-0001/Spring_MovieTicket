@@ -5,6 +5,7 @@ import com.Movieticket.MovieTicket.dto.TicketDTO;
 import com.Movieticket.MovieTicket.model.Ticket;
 import com.Movieticket.MovieTicket.service.ShowsService;
 import com.Movieticket.MovieTicket.service.TicketService;
+import com.Movieticket.MovieTicket.util.TicketResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -21,8 +22,8 @@ public class TicketController {
     private TicketService ticketService;
 
 
-//    @PostMapping("/addTicket")
-//    public ResponseEntity<TicketDTO> addTicket(@RequestBody TicketDTO ticketDTO){
-//        return new ResponseEntity<>(ticketService.addTicket(ticketDTO), HttpStatus.CREATED);
-//    }
+    @PostMapping("/addTicket")
+    public ResponseEntity<TicketResponse> addTicket(@RequestBody TicketDTO ticketDTO){
+        return new ResponseEntity<>(ticketService.addTicket(ticketDTO), HttpStatus.CREATED);
+    }
 }

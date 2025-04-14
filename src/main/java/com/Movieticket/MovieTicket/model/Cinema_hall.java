@@ -6,8 +6,6 @@ import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import java.util.List;
-
 @Entity
 @Table(name = "cinema")
 @Data
@@ -18,7 +16,7 @@ public class Cinema_hall {
     @Id
     private String cineId;
     private String cineHallName;
-    private String cineHallCity;
+    private String address;
     private int theatersNumber;
 
 //    @OneToMany(mappedBy = "cinema_hall",cascade = CascadeType.ALL,fetch = FetchType.EAGER)

@@ -18,7 +18,7 @@ public class  Ticket {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int ticketId;
 
-    private int totalTicketsPrice;
+    private Double totalTicketsPrice;
 
     private String bookedSeats;
 

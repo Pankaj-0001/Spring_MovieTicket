@@ -9,6 +9,7 @@ import com.Movieticket.MovieTicket.repo.TheaterRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
+import java.sql.Date;
 import java.util.Optional;
 
 @Component
@@ -27,6 +28,7 @@ public class ShowsMapper {
             Show show = new Show();
             show.setId(showsDTO.getId());
             show.setStart(showsDTO.getStart());
+            show.setDate(showsDTO.getDate());
             show.setEnd(showsDTO.getEnd());
             show.setMovie(movie.get());
             show.setTheater(theater.get());
@@ -39,6 +41,7 @@ public class ShowsMapper {
         ShowsDTO showsDTO = new ShowsDTO(
                 show.getId(),
                 show.getStart(),
+                show.getDate(),
                 show.getEnd(),
                 show.getMovie().getLicenseId(),
                 show.getTheater().getTheaterId()

@@ -6,6 +6,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.Date;
 import java.sql.Time;
 
 @Data
@@ -14,6 +15,7 @@ import java.sql.Time;
 public class ShowsDTO {
     private String id;
     private Time start;
+    private Date date;
     private Time end;
     private String movie;
     private String theater;
